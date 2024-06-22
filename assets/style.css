@@ -12,7 +12,7 @@
     --sec-color: #FF8F00;
     --font-color1: #181818;
 
-    --fs-xl: clamp(2rem, 4.246vw, 4.25rem);           
+    --fs-xl: clamp(1.5rem, 4.246vw, 4.25rem);           
     --fs-l: clamp(0.8rem, 1.318vw, 1.5rem);
     --fs-s: clamp(0.75rem, 1.171vw, 1.3rem);
 }
@@ -104,7 +104,7 @@ body {
     align-items: center;
     top: 0;
     left: 0;
-    margin: 0 5.857vw;
+    margin: 0 80px;
     height: 100vh;
 }
 
@@ -171,6 +171,10 @@ body {
 
 
 @media only screen and (max-width: 890px) {
+    .btn {
+        width: 150px;
+    }
+   
     #cv-btn {
         display: none;
     }
@@ -202,7 +206,52 @@ body {
         right: 0;
     }
 
-}   
+} 
+
+@media only screen and (max-width: 768px) {
+    .welcome-text {
+        gap: 20px;
+    }
+    
+    .social-icon .icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-icon .icon a {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 370px) {
+    .wrapper {
+        margin: 0 10px;
+    }
+
+    .welcome-text {
+        width: 100%;
+        gap: 14px;
+    }
+
+    .social-icon .icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    .social-icon .icon a {
+        font-size: 16px;
+    }
+
+    .btn {
+        width: 120px;
+        height: 35px;
+    }
+
+    .callback {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
 
 /* @media only screen and (max-width: 625px) {
     nav {
