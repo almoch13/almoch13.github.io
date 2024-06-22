@@ -4,31 +4,111 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portofolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./assets/style.css" />
   </head>
   <body>
-    <nav id="navbar">
-      <div class="logo">
-        <p>Moch <span>Al Faruqi</span></p>
-      </div>
-      <ul class="nav-link">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skill">Skill</a></li>
-        <li><a href="#project">Project</a></li>
+    <!-- Navigation Bar -->
+    <nav class="navbar" id="navbar">
+      <h1>Moch-Al</h1>
+      <ul class="nav-menu">
+        <li><a href="#welcome-section" class="nav-link">Home</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#project" class="nav-link">Projects</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
-    <i id="burger-menu" class="fa-solid fa-bars"></i>
+      <button type="button" class="btn" id="cv-btn">Download CV</button>
+      <i class="fa-solid fa-bars menu" onclick="toggleNav()"></i>
     </nav>
 
+    <!-- Welcome Section -->
+    <main>
+      <section id="welcome-section" class="wrapper">
+        <div class="welcome-text">
+          <h3>Hi, I’m Al Faruqi!</h3>
+          <h3>A Fullstack Developer</h3>
+          <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt
+            nesciunt nobis amet incidunt repudiandae earum alias hic quo dicta,
+            nihil ea eos voluptate ratione? Quasi, iusto. Laudantium recusandae
+            beatae ab?
+          </p>
+          <div class="social-icon">
+            <div class="icon">
+              <a href="">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+            </div>
+            <div class="icon">
+              <a href="">
+                <i class="fa-brands fa-facebook"></i>
+              </a>
+            </div>
+            <div class="icon">
+              <a href="">
+                <i class="fa-brands fa-github"></i>
+              </a>
+            </div>
+            <div class="icon">
+              <a href="">
+                <i class="fa-brands fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+          <div class="callback">
+            <button type="button" class="btn" id="hire-btn">Hire me</button>
+            <button type="button" class="btn" id="cv-btn-bottom">Download CV</button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- <section id="welcome-section" class="section-container">
+      <div class="text-box">
+        <h1>Hi, I'm Al Faruqi</h1>
+        <h2>I'm a Fullstack Developer</h2>
+        <div class="media-icon">
+          <a href="" class="sosmed-icon"></a>
+          <a href="" class="sosmed-icon"></a>
+          <a href="" class="sosmed-icon"></a>
+        </div>
+      </div>
+      <div class="img-box">
+        <img src="./assets/img-1.jpg" alt="foto profile">
+      </div>
+     </section> -->
+
     <script>
-        const burger = document.querySelector('#burger-menu');
-        const navLink = document.querySelector('.nav-link');
-        
-        burger.addEventListener('click', function(){
-            navLink.classList.toggle('active');
-        });
+      function toggleNav() {
+        var navMenu = document.querySelector(".nav-menu");
+        navMenu.classList.toggle("active");
+      }
+
+      window.onscroll = function () {
+        navShadow();
+      };
+      function navShadow() {
+        const navHeader = document.getElementById("navbar");
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          navHeader.style.boxShadow = "0 1px 6px rgba(0, 0, 0, 0.1)";
+          navHeader.style.height = "60px";
+        } else {
+          navHeader.style.boxShadow = "none";
+          navHeader.style.height = "80px";
+        }
+      }
+      // const burger = document.querySelector('.menu');
+      // const navLink = document.querySelector('.nav-menu');
+
+      // burger.addEventListener('click', function(){
+      //     navLink.classList.toggle('active');
+      // });
     </script>
 
-    <script src="https://kit.fontawesome.com/b5e85ed2f7.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/b5e85ed2f7.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
