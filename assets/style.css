@@ -156,6 +156,10 @@ body {
     color: var(--font-color1);
 }
 
+.social-icon .icon:hover {
+    background: hsl(182, 81%, 60%);
+}
+
 .callback {
     display: flex;
     gap: 2rem;
